@@ -1,3 +1,5 @@
+
+
 //: [Previous](@previous)
 
 import Foundation
@@ -7,16 +9,29 @@ var x = 10
 var y = 20
 
 var xPlusY1: Int {
+    set {
+        x = newValue - y
+    }
 	get {
-
+        return x + y
 	}
 }
 
+print(xPlusY1)
 // 1. 위의 xPlusY1 을 출력했을 때 x와 y 프로퍼티의 합이 나오도록 하기
 //2. xPlusY1의 값에 50을 할당하는 경우 변수 x 의 값도 동일하게 바뀌도록 구현하기
+xPlusY1 = 50
+print(x)
+
+
+
+
+
+
 
 
 var x2 = 10
+
 class StudyTimeCounter {
 	var totalTime: Int = 0 {
 		willSet {
@@ -32,7 +47,13 @@ class StudyTimeCounter {
 let test = StudyTimeCounter()
 test.totalTime = 50
 x2
+
+
 // 3번 : 위와 같이 실행 시 x2의 값은?
+
+
+
+
 
 //4번 문제
 let studyTimeCounter = StudyTimeCounter()
@@ -46,7 +67,7 @@ x2
 studyTimeCounter.totalTime = 3
 x2
 
-//4. 각 x2 의 값에는 어떤 값이 할당되어 있을까요? 
+//4. 각 x2 의 값에는 어떤 값이 할당되어 있을까요?
 
 
 // 5번
