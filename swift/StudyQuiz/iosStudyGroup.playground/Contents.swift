@@ -324,53 +324,104 @@ import Foundation
 
 
 
-struct TimesTable {
-    let multiplier: Int
-    subscript(index: Int) -> Int {
-        return multiplier * index
-    }
-}
+//struct TimesTable {
+//    let multiplier: Int
+//    subscript(index: Int) -> Int {
+//        return multiplier * index
+//    }
+//}
+//
+//
+//let threeTimesTable = TimesTable(multiplier: 3)
+//print("six times three is \(threeTimesTable[6])")
+//
+//var numberOfLegs = ["Spider": 8, "ant": 6, "cat": 4]
+//numberOfLegs["bird"] = 2
+//
+//struct Matrix {
+//    let rows: Int, columns: Int
+//    var grid: [Double]
+//    init(rows: Int, columns: Int) {
+//        self.rows = rows
+//        self.columns = columns
+//        grid = Array(repeating: 0.0, count: rows * columns)
+//    }
+//    func indexIsValid(row: Int, column: Int) -> Bool {
+//        return row >= 0 && row < rows && column >= 0 && column < columns
+//    }
+//    subscript(row: Int, column: Int) -> Double {
+//        get {
+//            assert(indexIsValid(row: row, column: column), "Index out of range")
+//            return grid[(row * columns) + column]
+//        }
+//        set {
+//            assert(indexIsValid(row: row, column: column), "Index out of range")
+//            grid[(row * columns) + column] = newValue
+//        }
+//    }
+//}
+//
+//var testMatrix = Matrix(rows: 2, columns: 2)
+//testMatrix[0, 1] = 1.5
+//testMatrix[1, 0] = 3.2
+//
+//enum Planet: Int {
+//    case mercury = 1, venus, earth, mars, jupiter, saturn, uranus, neptune
+//    static subscript(n: Int) -> Planet {
+//        return Planet(rawValue: n)!
+//    }
+//}
+//
+//let mars = Planet[4]
+//print(mars)
 
 
-let threeTimesTable = TimesTable(multiplier: 3)
-print("six times three is \(threeTimesTable[6])")
+//let someString = "Some string literal value"
+//
+//let quotation = """
+//The White Rabbit put on his spectacles. "Where shall I begin, \
+//please your Majesty?" he asked.
+//
+//"Begin at the beginning," the King said gravely, "and go on \
+//till you come to the end; then stop."
+//"""
+//
+//let wiseWords = "\"Imagination is more important than knowledge\" - Einstein"
+//// "Imagination is more important than knowledge" - Einstein
+//let dollarsSign = "\u{24}"
+//let blackHeart = "\u{2665}"
+//let sparklingHeart = "\u{1F496}"
+//
+//let threeDoubleQuotationMarks = """
+//Escaping the first quotation mark \"""
+//Escaping all three quotation marks \"\"\"
+//"""
+//
+//print(threeDoubleQuotationMarks)
 
-var numberOfLegs = ["Spider": 8, "ant": 6, "cat": 4]
-numberOfLegs["bird"] = 2
+//var text = #"Line 1 \nLine 2"#
+//print(text)
+//
+//text = #"Line 1 \#nLine 2"#
+//print(text)
+//
+//text = ###"Line 1 \###nLine 2"###
+//print(text)
 
-struct Matrix {
-    let rows: Int, columns: Int
-    var grid: [Double]
-    init(rows: Int, columns: Int) {
-        self.rows = rows
-        self.columns = columns
-        grid = Array(repeating: 0.0, count: rows * columns)
-    }
-    func indexIsValid(row: Int, column: Int) -> Bool {
-        return row >= 0 && row < rows && column >= 0 && column < columns
-    }
-    subscript(row: Int, column: Int) -> Double {
-        get {
-            assert(indexIsValid(row: row, column: column), "Index out of range")
-            return grid[(row * columns) + column]
-        }
-        set {
-            assert(indexIsValid(row: row, column: column), "Index out of range")
-            grid[(row * columns) + column] = newValue
-        }
-    }
-}
+//let threeMoreDoubleQuotationMarks = #"""
+//Here are three more double quotes: """
+//"""#
+//print(threeMoreDoubleQuotationMarks)
 
-var testMatrix = Matrix(rows: 2, columns: 2)
-testMatrix[0, 1] = 1.5
-testMatrix[1, 0] = 3.2
+//for character in "Dog!🐶" {
+//    print(character)
+//}
+//
+//let catCharacters: [Character] = ["C", "a", "t", "!", "🐱"]
+//let catString = String(catCharacters)
+//print(catString)
 
-enum Planet: Int {
-    case mercury = 1, venus, earth, mars, jupiter, saturn, uranus, neptune
-    static subscript(n: Int) -> Planet {
-        return Planet(rawValue: n)!
-    }
-}
+var welcome = "hello there"
+let exclamationMark: Character = "!"
 
-let mars = Planet[4]
-print(mars)
+welcome.append(exclamationMark)
