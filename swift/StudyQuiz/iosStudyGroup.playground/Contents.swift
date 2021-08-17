@@ -426,7 +426,30 @@ import Foundation
 //
 //welcome.append(exclamationMark)
 
-print(#"Write an interpolated string in Swift using \(multiplier)."#)
+//print(#"Write an interpolated string in Swift using \(multiplier)."#)
 // Prints "Write an interpolated string in Swift using \(multiplier)."
-print(#"6 times 7 is \#(6 * 7)."#)
+//print(#"6 times 7 is \#(6 * 7)."#)
 // Prints "6 times 7 is 42."
+
+//let eAcute: Character = "\u{E9}"
+//let combineEAcute: Character = "\u{65}\u{301}"
+//
+//let precomposed: Character = "\u{D55C}"
+//let decomposed: Character = "\u{1112}\u{1161}\u{11AB}"
+
+//var word = "cafe"
+//print("the number of characters in \(word) is \(word.count)")
+//
+//word += "\u{301}"
+//print("the number of characters in \(word) is \(word.count)")
+
+let greeting = "Guten Tag!"
+//greeting[greeting.startIndex]
+//greeting[greeting.index(before: greeting.endIndex)]
+//greeting[greeting.index(after: greeting.startIndex)]
+//let index = greeting.index(greeting.startIndex, offsetBy: 7)
+//greeting[index]
+
+for index in greeting.indices {
+    print("\(greeting[index])", terminator: "")
+}
