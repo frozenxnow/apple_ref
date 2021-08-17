@@ -443,13 +443,25 @@ import Foundation
 //word += "\u{301}"
 //print("the number of characters in \(word) is \(word.count)")
 
-let greeting = "Guten Tag!"
+//let greeting = "Guten Tag!"
 //greeting[greeting.startIndex]
 //greeting[greeting.index(before: greeting.endIndex)]
 //greeting[greeting.index(after: greeting.startIndex)]
 //let index = greeting.index(greeting.startIndex, offsetBy: 7)
 //greeting[index]
 
-for index in greeting.indices {
-    print("\(greeting[index])", terminator: "")
-}
+//for index in greeting.indices {
+//    print("\(greeting[index])", terminator: " ")
+//}
+
+var welcome = "hello"
+welcome.insert("!", at: welcome.endIndex)
+print(welcome)
+
+welcome.insert(contentsOf: " there", at: welcome.index(before: welcome.endIndex))
+print(welcome)
+
+welcome.remove(at: welcome.index(before: welcome.endIndex))
+print(welcome)
+
+let range = welcome.index(welcome.endIndex, offsetBy: -6) ..< welcome.endIndex
