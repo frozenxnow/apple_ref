@@ -421,7 +421,12 @@ import Foundation
 //let catString = String(catCharacters)
 //print(catString)
 
-var welcome = "hello there"
-let exclamationMark: Character = "!"
+//var welcome = "hello there"
+//let exclamationMark: Character = "!"
+//
+//welcome.append(exclamationMark)
 
-welcome.append(exclamationMark)
+print(#"Write an interpolated string in Swift using \(multiplier)."#)
+// Prints "Write an interpolated string in Swift using \(multiplier)."
+print(#"6 times 7 is \#(6 * 7)."#)
+// Prints "6 times 7 is 42."
