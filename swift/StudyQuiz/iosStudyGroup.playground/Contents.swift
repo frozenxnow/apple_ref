@@ -454,14 +454,24 @@ import Foundation
 //    print("\(greeting[index])", terminator: " ")
 //}
 
-var welcome = "hello"
-welcome.insert("!", at: welcome.endIndex)
-print(welcome)
+//var welcome = "hello"
+//welcome.insert("!", at: welcome.endIndex)
+//print(welcome)
+//
+//welcome.insert(contentsOf: " there", at: welcome.index(before: welcome.endIndex))
+//print(welcome)
+//
+//welcome.remove(at: welcome.index(before: welcome.endIndex))
+//print(welcome)
+//
+//let range = welcome.index(welcome.endIndex, offsetBy: -6) ..< welcome.endIndex
+//welcome.removeSubrange(range)
+//print(welcome)
 
-welcome.insert(contentsOf: " there", at: welcome.index(before: welcome.endIndex))
-print(welcome)
+let greeting = "Hello, world!"
+let index = greeting.firstIndex(of: ",") ?? greeting.endIndex
+let beginning = greeting[..<index]
+// beginning is "Hello"
 
-welcome.remove(at: welcome.index(before: welcome.endIndex))
-print(welcome)
-
-let range = welcome.index(welcome.endIndex, offsetBy: -6) ..< welcome.endIndex
+// Convert the result to a String for long-term storage.
+let newString = String(beginning)
